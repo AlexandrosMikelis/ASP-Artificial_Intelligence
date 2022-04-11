@@ -26,7 +26,7 @@ pet(z;d;s;f;h).
 :-  lives(X1,Y1),lives(X2,Y2),hasPet(X1,h),smokes(X2,k),Y1!=Y2+1,Y2!=Y1+1.
 :-  smokes(X,l),drinks(X,Y),Y!=j.
 :-  smokes(j,X),X!=p.
-:-  lives(n,Y),	hasColor(Z,b),	Y	!=	Z+1,	Z	!=	Y+1.
+:-  lives(n,Y),	hasColor(Z,b),Y!=Z+1,Z!=Y+1.
 
 #show	hasPet/2.	
 #show	drinks/2.	
