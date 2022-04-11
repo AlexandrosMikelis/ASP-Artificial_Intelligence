@@ -5,11 +5,11 @@ drink(c;w;m;j;t).
 cigatates(c;k;p;o;l).		
 pet(z;d;s;f;h).	
 
-1	{	lives(X,Y):house(Y)}1	:-man(X).	
-1	{	smokes(X,Y):cigatates(Y)}	1	:-man(X).	
-1	{	drinks(X,Y):drink(Y)}	1	:-man(X).	
-1	{	hasPet(X,Y):pet(Y)}	1	:-man(X).	
-1	{	hasColor(X,Y):col(Y)}	1	:-house(X).	
+1{lives(X,Y):house(Y)}1:-man(X).	
+1{smokes(X,Y):cigatates(Y)}1:-man(X).	
+1{drinks(X,Y):drink(Y)}1:-man(X).	
+1{hasPet(X,Y):pet(Y)}1:-man(X).	
+1{hasColor(X,Y):col(Y)}1:-house(X).	
 
 :-  lives(X,Y),lives(Z,Y),X!=Z.
 
