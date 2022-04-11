@@ -5,20 +5,17 @@ drink(c;w;m;j;t).
 cigatates(c;k;p;o;l).		
 pet(z;d;s;f;h).	
 
-%		Γεννήτρια	Πιθανών	Λύσεων
 1	{	lives(X,Y):	house(Y)	}	1	:-	man(X).	
 1	{	smokes(X,Y):	cigatates(Y)	}	1	:-	man(X).	
 1	{	drinks(X,Y):	drink(Y)	}	1	:-	man(X).	
 1	{	hasPet(X,Y):	pet(Y)	}	1	:-	man(X).	
 1	{	hasColor(X,Y):	col(Y)	}	1	:-	house(X).	
 
-%		Μοναδικότητα	Επιλογών
-:-	lives(X,Y),	lives(Z,Y),	X	!=	Z.
+:-  lives(X,Y),lives(Z,Y),X!=Z.
 
-%		Περιορισμοί
-:-	lives(b,Y),	hasColor(Y,Z),	Z	!=	r.	
-:-	hasPet(s,Y),	Y	!=	d.	
-:-	lives(X,Y),	hasColor(Y,g),	drinks(X,Z),	Z	!=	c.
+:-  lives(b,Y),hasColor(Y,Z), Z!=r.	
+:-	hasPet(s,Y),Y!=d.	
+:-	lives(X,Y),hasColor(Y,g),drinks(X,Z),Z!=c.
 :-  drinks(u,Z), Z!=t.
 :-  hasColor(X,w),hasColor(Y,g), Y !=X + 1.
 :-  smokes(X,o),hasPet(X,Y), Y!=s.
@@ -31,6 +28,5 @@ pet(z;d;s;f;h).
 :-  smokes(j,X),X!=p.
 :-  lives(n,Y),	hasColor(Z,b),	Y	!=	Z+1,	Z	!=	Y+1.
 
-%		Αποτελέσματα	
 #show	hasPet/2.	
 #show	drinks/2.	
